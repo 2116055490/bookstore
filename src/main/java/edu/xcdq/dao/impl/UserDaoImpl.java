@@ -6,10 +6,10 @@ import edu.xcdq.dao.UserDao;
 
 import java.sql.Connection;
 
-public class UserDaoImpl extends BaseDao implements UserDao {
+public class UserDaoImpl extends BaseDao <UserDao> implements UserDao {
     @Override
     public void saveUser(Connection conn, User user) {
-        String sql = "insert into users(username,password,email) values(?,?,?)";
+        String sql = "insert into user(username,password,email) values(?,?,?)";
         update(conn,sql, user.getUsername(),user.getPassword(),user.getEmail());
     }
 

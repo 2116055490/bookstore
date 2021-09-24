@@ -7,6 +7,7 @@ public class User {
     private String email;
 
     public User() {
+
     }
 
     public User(String username, String password, String email) {
