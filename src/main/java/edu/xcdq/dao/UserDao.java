@@ -3,6 +3,7 @@ package edu.xcdq.dao;
 import edu.xcdq.beans.User;
 
 import java.sql.Connection;
+import java.util.List;
 
 
 public interface UserDao {
@@ -11,6 +12,7 @@ public interface UserDao {
 
     // 查
     User getUser(Connection conn, User user);
+    List<User> getUsers(Connection coon);
 
     // 校验用户信息
     boolean checkUsername(Connection conn,User user);
